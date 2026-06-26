@@ -1,0 +1,30 @@
+<svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+
+    .brand{
+    font-family:'Georgia', serif;
+    font-size:90px;
+    font-weight:bold;
+    fill:#3B3B3B;
+    letter-spacing:4px;
+    }
+
+    .subtitle{
+    font-family:'Arial', sans-serif;
+    font-size:28px;
+    fill:#9A7B4F;
+    letter-spacing:12px;
+    }
+
+  </style>
+
+  <text x="20" y="95" class="brand">
+    ALLURE
+  </text>
+
+  <text x="26" y="145" class="subtitle">
+    PREMIUM FASHION
+  </text>
+
+</svg>

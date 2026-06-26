@@ -1,0 +1,127 @@
+
+{{#loggedin}}
+<nav class="navbar navbar-expand-lg px-4 shadow allure-navbar">
+
+    <a class="navbar-brand d-flex align-items-center"
+       href="#"
+       onclick="loadHome()">
+
+        <img src="images/logo.svg"
+             alt="ALLURE Logo"
+             class="logo me-3">
+
+    </a>
+
+    <div class="navbar-nav me-auto ms-4">
+
+        <a class="nav-link" href="#" onclick="loadHome()">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+
+        <a class="nav-link" href="#" onclick="editProfile()">
+            <i class="fa-solid fa-user"></i> Profile
+        </a>
+
+        <a class="nav-link" href="#" onclick="showCart()">
+            <i class="fa-solid fa-cart-shopping"></i> Cart
+        </a>
+
+        <a class="nav-link"
+           href="#"
+           onclick="alert('My Orders clicked'); cartService.loadOrders();">
+
+            <i class="fa-solid fa-box"></i>
+            My Orders
+
+        </a>
+
+        <!-- Future Feature -->
+        <a class="nav-link disabled">
+            <i class="fa-solid fa-gift"></i> Rewards
+        </a>
+
+    </div>
+
+    <div class="welcome-user">
+
+        Welcome,
+
+        <strong>{{username}}</strong>
+
+        |
+
+        <a href="#"
+           class="text-warning text-decoration-none"
+           onclick="userService.logout();return false;">
+            Logout
+        </a>
+
+        <span class="ms-3 cart" onclick="showCart()">
+
+            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+
+            <span id="cart-items"
+                  class="badge bg-danger">
+                0
+            </span>
+
+        </span>
+
+    </div>
+
+</nav>
+{{/loggedin}}
+
+{{#loggedout}}
+
+<nav class="navbar navbar-expand-lg px-4 shadow allure-navbar">
+
+    <a class="navbar-brand" href="#" onclick="loadHome()">
+
+        <div class="brand-logo">
+
+        <span class="brand-title">
+            ALLURE
+        </span>
+
+            <span class="brand-subtitle">
+            Premium Fashion
+        </span>
+
+        </div>
+
+    </a>
+
+    <div class="navbar-nav me-auto ms-4">
+
+        <a class="nav-link" href="#" onclick="loadHome()">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+
+    </div>
+
+    <div>
+
+        <!-- Login Button -->
+        <a href="#"
+           class="btn btn-outline-dark"
+           onclick="showLoginForm();return false;">
+
+            Login
+
+        </a>
+
+        <!-- Register Button -->
+        <a href="#"
+           class="btn allure-button"
+           onclick="showRegisterForm();return false;">
+
+            Register
+
+        </a>
+
+    </div>
+
+</nav>
+
+{{/loggedout}}
